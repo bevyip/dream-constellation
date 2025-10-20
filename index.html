@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -110,6 +111,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="info-panel">
         <h1>Dream Emotion Constellation</h1>
@@ -135,12 +137,28 @@
             </div>
             <div class="legend-item">
                 <div class="legend-color" style="background: #ffd93d;"></div>
-                <span>Other Emotions</span>
+                <span>Surprised/Curious</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ffd93d;"></div>
+                <span>Adventurous/Fun</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff6b9d;"></div>
+                <span>In Love</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff4757;"></div>
+                <span>Shock</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #5f27cd;"></div>
+                <span>Sad/Lonely</span>
             </div>
         </div>
         <div class="stats">
-            <strong>19 dreams collected</strong><br>
-            Survey Period: Oct 17-19, 2025
+            <strong>30 dreams collected</strong><br>
+            Survey Period: Oct 17-20, 2025
         </div>
     </div>
 
@@ -148,6 +166,8 @@
         <div class="dream-title" id="detail-title"></div>
         <div class="dream-emotion" id="detail-emotion"></div>
         <div class="dream-content" id="detail-content"></div>
+        <div class="dream-name" id="detail-name"
+            style="font-size: 12px; color: #a8b5ff; margin-top: 8px; display: none;"></div>
     </div>
 
     <div id="canvas-container"></div>
@@ -155,5 +175,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
     <script src="constellation.js"></script>
 </body>
-</html>
 
+</html>
