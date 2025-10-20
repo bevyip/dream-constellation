@@ -9,7 +9,7 @@ This project addresses a key finding from the dream survey: **people struggle to
 ## Features
 
 - **19 Dreams Visualized**: Each star represents one survey response
-- **Color-Coded Emotions**: 
+- **Color-Coded Emotions**:
   - Red: Anxious/Stressed (42% of responses)
   - Blue: Confused/Disoriented
   - Green: Happy/Relieved
@@ -53,8 +53,3 @@ This project addresses a key finding from the dream survey: **people struggle to
 - `index.html` - Main HTML structure and styling
 - `constellation.js` - p5.js visualization logic and dream data
 - `README.md` - This documentation
-
-## Access
-
-Live URL: https://8080-i4ltzmvrsy9i3b6d3olhl-843abb1a.manusvm.computer
-
