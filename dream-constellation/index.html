@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Emotion Constellation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(to bottom, #0a0e27 0%, #1a1a3e 100%);
+            color: #e0e0e0;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        #info-panel {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(10, 14, 39, 0.85);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 300px;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #a8b5ff;
+        }
+
+        .description {
+            font-size: 12px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .legend {
+            font-size: 11px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        #canvas-container {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #dream-detail {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(10, 14, 39, 0.95);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 400px;
+            display: none;
+            z-index: 10;
+        }
+
+        #dream-detail.visible {
+            display: block;
+        }
+
+        .dream-title {
+            font-size: 14px;
+            color: #a8b5ff;
+            margin-bottom: 8px;
+        }
+
+        .dream-emotion {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-bottom: 12px;
+        }
+
+        .dream-content {
+            font-size: 13px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .stats {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 11px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div id="info-panel">
+        <h1>Dream Emotion Constellation</h1>
+        <div class="description">
+            Each star represents a dream from the survey. Hover to explore. Colors represent emotional states.
+        </div>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff6b6b;"></div>
+                <span>Anxious/Stressed</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #a8b5ff;"></div>
+                <span>Confused/Disoriented</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #51cf66;"></div>
+                <span>Happy/Relieved</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff9f43;"></div>
+                <span>Fearful/Threatened</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ffd93d;"></div>
+                <span>Other Emotions</span>
+            </div>
+        </div>
+        <div class="stats">
+            <strong>19 dreams collected</strong><br>
+            Survey Period: Oct 17-19, 2025
+        </div>
+    </div>
+
+    <div id="dream-detail">
+        <div class="dream-title" id="detail-title"></div>
+        <div class="dream-emotion" id="detail-emotion"></div>
+        <div class="dream-content" id="detail-content"></div>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="constellation.js"></script>
+</body>
+</html>
+
